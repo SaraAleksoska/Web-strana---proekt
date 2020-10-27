@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Your opinion</title>
+
+        <style type = "text/css">
+        
+        body {font-family: Arial, Helvetica, sans-serif;}
+        *{box-sizing: border-box;}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px double #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=tel]{
+  width: 100%;
+  padding: 12px;
+  border: 1px double #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=datetime-local]{
+    width: 100%;
+    padding: 12px;
+    border: 1px double #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=reset] {
+  background-color: #9e1010;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=reset]:hover {
+  background-color: #6b0c0c;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #ccc;
+    outline: none;
+    opacity:0.7;
+    stop-color: lawngreen;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+h1{
+    font-family: cursive;
+    color: rgb(90, 114, 221);
+}
+        </style>
+    </head>
+<body>
+    <h1>Your opinion is important!</h1>
+
+    <div class="box">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="Macedonia">Macedonia</option>
+          <option value="Germany">Germany</option>
+          <option value="USA">USA</option>
+          <option value="Italy">Italy</option>
+          <option value="Spain">Spain</option>
+          <option value="Netherlans">Netherlands</option>
+          <option value="Serbia">Serbia</option>
+          <option value="Austria">Austria</option>
+        </select>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="name@domail.com" name="email" id="email">
+
+        <label for="tel">Phone number</label>
+        <input type="tel" placeholder="(+389) xx xxx xxx">
+        
+        <label for="Range">Rate the site</label>
+        <input type="range" min="0" max="10" value="8">
+
+        <label for="date">Datetime-local</label>
+        <input type="datetime-local" >
+
+        <label for="likes">What did you like the most</label>
+        <p>
+        <label>Music &amp Movies<input type="checkbox" value="Movies and music"></label>
+        <label>Food &amp Sport<input type="checkbox" value="Food and sport"></label>
+        <label>Adventures<input type="checkbox" value="Adventures"></label>
+        <label>Mini Instagram<input type="checkbox" value="Mini instagram"></label>
+        </p>
+
+        <label for="subject">Comment</label>
+        <textarea id="subject" name="subject" placeholder="Write your comment here" style="height:200px"></textarea>
+    
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+      </form>
+    </div>
+</body>
+</html>
