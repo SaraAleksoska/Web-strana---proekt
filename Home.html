@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home</title>
+
+    <style type="text/css">
+        .main {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            justify-content: space-around;
+            background: linear-gradient(to right, rgb(48, 48, 48), rgb(95, 93, 93));
+        }
+        
+        h3 {
+            color: honeydew;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        
+        .h2 {
+            color: rgb(55, 151, 151);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        h4 {
+            z-index: 1;
+            color: rgb(231, 231, 231);
+            left: 35px;
+        }
+        
+        body {
+            background: linear-gradient(to right, rgb(48, 48, 48), rgb(95, 93, 93));
+            background-repeat: repeat;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background: linear-gradient(to right, rgb(48, 48, 48), rgb(95, 93, 93));
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+        
+        .logo {
+            color: rgba(240, 239, 239, 0.945);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+            margin-right: 200pt;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            text-align: right;
+        }
+        
+        .nav-links li {
+            list-style: none;
+            display: inline-block;
+        }
+        
+        .nav-links a {
+            color: rgba(243, 243, 243, 0.945);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 0px;
+        }
+        
+        .nav-active {
+            transform: translateX(0%);
+        }
+        
+        .infotmation {
+            width: 1000px;
+            height: 1000px;
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            transform: translateY(-50%);
+        }
+        
+        #circle {
+            width: 700px;
+            height: 700px;
+            position: absolute;
+            top: 10pc;
+            left: 0%;
+            border-radius: 50%;
+            transform: rotate(0deg);
+            transition: 1s;
+        }
+        
+        .feature {
+            position: absolute;
+            font-size: 20px;
+        }
+        
+        .one {
+            top: 330px;
+            right: 10px;
+        }
+        
+        .two {
+            bottom: 700px;
+            left: 290px;
+            transform: rotate(-90deg);
+        }
+        
+        .three {
+            bottom: 330px;
+            left: 1px;
+            transform: rotate(-180deg);
+        }
+        
+        .four {
+            top: 700px;
+            right: 270px;
+            transform: rotate(-270deg);
+        }
+        
+        a {
+            color: rgb(71, 179, 179);
+            list-style: none;
+            transform: rotate(-270deg);
+        }
+        
+        .par {
+            color: rgb(245, 244, 244);
+            text-align: left;
+        }
+        
+        .ss {
+            width: 220px;
+            height: 310px;
+            top: 500px;
+            left: 250px;
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .centar {
+            display: block;
+            margin-left: 43%;
+        }
+        
+        .controls {
+            position: absolute;
+            left: 60pc;
+            top: 20pc;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+        
+        #up {
+            cursor: pointer;
+            margin-bottom: 0px;
+        }
+        
+        #down {
+            cursor: pointer;
+            margin-top: 0px;
+            transform: rotate(180deg);
+        }
+        
+        .overlay {
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 500px solid rgb(71, 179, 179);
+            border-bottom: 500px solid rgb(55, 151, 151);
+            border-right: 500px solid transparent;
+            border-left: 500px solid rgb(70, 163, 163);
+            position: absolute;
+        }
+        
+        .divKlasa {
+            width: 400px;
+            height: 600;
+            background-image: radial-gradient(rgb(143, 143, 143)15%, rgb(75, 74, 74)35%, rgb(54, 53, 53)50%);
+            box-sizing: border-box;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 3.2px;
+            margin-right: 2.85px;
+            float: left;
+            text-align: center;
+        }
+        
+        .divKlasa:hover {
+            background-color: rgb(224, 218, 218);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ccc;
+            height: 40px;
+            width: 250px;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: #7a7c7a;
+            opacity: 0.9;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <h2>Sara's Life</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/osnovna.html">Home</a></li>
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/%D0%A1%D0%90%D0%A0%D0%90/%D0%A4%D0%90%D0%9A%D0%A3%D0%9B%D0%A2%D0%95%D0%A2/O%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BD%D0%B0%20web%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D1%9A%D0%B5/WEB-strana/FavoriteThings.html">Favorite things</a></li>
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/miniinsta.html">Instagram</a></li>
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/MyDiary.html">Blog</a></li>
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/formi.html">Feedback form</a></li>
+                <li><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Kontakt.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="infotmation">
+            <div class="overlay"></div>
+            <img src="sarasvrtena.jpg" class="ss" alt="ss">
+            <div id="circle">
+                <div class="feature one">
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bplanina.html">Hiking</a>
+                </div>
+                <div class="feature two">
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bsktivnosti.html">Activities</a>
+                </div>
+                <div class="feature three">
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Btraveling.html">Travelling</a>
+                </div>
+                <div class="feature four">
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/BskeorRethink.html">Self-Development</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="up.jpg" width="40px" height="20px" id="up">
+            <h3>Sara's blog</h3>
+            <img src="up.jpg" width="40px" height="20px" id="down">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        up.onclick = function() {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        down.onclick = function() {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+    <p>
+        <h2><a class="h2" href="file:///C:/Users/Lenovo%20X%201-3/Desktop/%D0%A1%D0%90%D0%A0%D0%90/%D0%A4%D0%90%D0%9A%D0%A3%D0%9B%D0%A2%D0%95%D0%A2/O%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BD%D0%B0%20web%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D1%9A%D0%B5/WEB-strana/FavoriteThings.html">Favorite things</a></h2>
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Music</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/2.Music.html"><img src="music.jpg" width="200" height="200"></a></span>
+                <div class="dropdown-content">
+                    <p>music</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Movies</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/2.Movies.html"><img src="film.jpg" width="200" height="200" alt="movie"></a></span>
+                <div class="dropdown-content">
+                    <p>movies</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Food</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/%D0%A1%D0%90%D0%A0%D0%90/%D0%A4%D0%90%D0%9A%D0%A3%D0%9B%D0%A2%D0%95%D0%A2/O%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BD%D0%B0%20web%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D1%9A%D0%B5/WEB-strana/2.Japancake.html"><img src="food.jpg" width="200" height="200" alt="food"></a></span>
+                <div class="dropdown-content">
+                    <p>food</p>
+                </div>
+            </div>
+        </div>
+    </p>
+
+
+    <p>
+        <h2><a class="h2" href="file:///C:/Users/Lenovo%20X%201-3/Desktop/%D0%A1%D0%90%D0%A0%D0%90/%D0%A4%D0%90%D0%9A%D0%A3%D0%9B%D0%A2%D0%95%D0%A2/O%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BD%D0%B0%20web%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D1%9A%D0%B5/WEB-strana/MyDiary.html">My Diary</a></h2>
+
+        <br>
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Hiking</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bplanina.html"><img src="hiking.jpg" width="200" height="200"></a></span>
+                <div class="dropdown-content">
+                    <p>read more</p>
+                </div>
+                <p class="par">
+                    In this fast-paced society that we live in today, we are all caught up in the hustle and bustle of life. As students, we are forced to juggle with various tasks at hand ranging from studies, homeworks, and relationships simultaneously. As each of us are
+                    adopting a rather hectic lifestyle to cope with these challenges, nature is the only getaway...
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bplanina.html">read more</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Activities</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bsktivnosti.html"><img src="activities.jpg" width="200" height="200" alt="movie"></a></span>
+                <div class="dropdown-content">
+                    <p>read more</p>
+                </div>
+                <p class="par">
+                    "Anything that gets your blood racing is probably worth doing." – Hunter S. Thompson. Adventures don’t have to be African safari’s, base jumping or flying around the world. The best way to have more fun in life is to reframe what you feel an adventure
+                    is. My definition would be something enjoyable, unique and a departure from your routine...
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/Bsktivnosti.html">read more</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="divKlasa">
+            <div class="dropdown">
+                <h3>Self-development</h3>
+                <span><a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/BskeorRethink.html"><img src="SelfDe.jpg" width="200" height="200" alt="movie"></a></span>
+                <div class="dropdown-content">
+                    <p>read more</p>
+                </div>
+                <p class="par">
+                    As a student of Faculty of Electrical Engineering and Information Technologies, I can say that I am an ambitious and dynamic person always ready for new challenges. I am currently enrolling for 3rd year (5th semester) of my studies, and I can say that
+                    I am definitely a person that never quits and work hard on tasks that are given to me...
+                    <a href="file:///C:/Users/Lenovo%20X%201-3/Desktop/WEB-strana/BskeorRethink.html">read more</a>
+                </p>
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <hr>
+        <h2>
+            <a class="h2" href="file:///C:/Users/Lenovo%20X%201-3/Desktop/%D0%A1%D0%90%D0%A0%D0%90/%D0%A4%D0%90%D0%9A%D0%A3%D0%9B%D0%A2%D0%95%D0%A2/O%D1%81%D0%BD%D0%BE%D0%B2%D0%B8%20%D0%BD%D0%B0%20web%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B8%D1%80%D0%B0%D1%9A%D0%B5/WEB-strana/Kontakt.html">Contact</a></h2>
+        <div class="centar">
+            <img src="Facebook-Logo.jpg" width="40px" height="38px" alt="fb">
+            <img src="instagramlogo.png" width="42px" height="38px" alt="insta">
+            <img src="Twittericon.webp" width="42px" height="38px" alt="insta">
+        </div>
+    </p>
+</body>
+
+</html>
