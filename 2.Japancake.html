@@ -105,8 +105,12 @@
                 </p>
 
                 <script>
+                    var stars;
+                    var pom;
+
                     function btnClick1() {
-                        var stars = 1;
+                        stars = 1;
+                        pom = 1;
                         document.getElementById('stars').innerHTML = stars;
                         document.getElementById("prazni").style.visibility = "hidden";
                         document.getElementById("prazni").style.display = "none";
@@ -116,7 +120,8 @@
                     }
 
                     function btnClick2() {
-                        var stars = 2;
+                        stars = 2;
+                        pom = 2;
                         document.getElementById('stars').innerHTML = stars;
                         document.getElementById("prazni").style.visibility = "hidden";
                         document.getElementById("prazni").style.display = "none";
@@ -128,7 +133,8 @@
                     }
 
                     function btnClick3() {
-                        var stars = 3;
+                        stars = 3;
+                        pom = 3;
                         document.getElementById('stars').innerHTML = stars;
                         document.getElementById("prazni").style.visibility = "hidden";
                         document.getElementById("prazni").style.display = "none";
@@ -140,7 +146,8 @@
                     }
 
                     function btnClick4() {
-                        var stars = 4;
+                        stars = 4;
+                        pom = 4;
                         document.getElementById('stars').innerHTML = stars;
                         document.getElementById("prazni").style.visibility = "hidden";
                         document.getElementById("prazni").style.display = "none";
@@ -152,7 +159,8 @@
                     }
 
                     function btnClick5() {
-                        var stars = 5;
+                        stars = 5;
+                        pom = 5;
                         document.getElementById('stars').innerHTML = stars;
                         document.getElementById("prazni").style.visibility = "hidden";
                         document.getElementById("prazni").style.display = "none";
@@ -160,11 +168,42 @@
                         for (var i = 1; i < 6; i++) {
                             document.getElementById(i).style.visibility = "visible";
                         }
-                        return true
+                        return true;
                     }
+                    var star;
+
+                    function lala() {
+                        for (var i = 1; i < counter; i++) {
+                            star[i] = stars;
+                        }
+                    }
+
+                    function start() {
+                        var button = document.getElementById("submit");
+                        button.addEventListener("click", funk, false);
+                    }
+                    /* ne uspeva
+                                        function Average() {
+                                            for (var i = 1; i < counter.length; i++) {
+                                                var current = star[i].value - '0';
+                                                average += current;
+                                                var a = average + parseInt(star[0].value)) / star.length;
+                                            return average;
+                                        }
+                                        var counter = 1;
+
+                                        function Table() {
+                                            var results = "<table><caption>rate</caption>" +
+                                                "<thead><th>Counter</th><th>Average</th></head><tbody>" +
+                                                "<tr><td>" + counter + "</td><td>" + a + "</td></tr>";
+                                            results += "</tbody></table>";
+                                        }
+                    */
                 </script>
-
-
+                <!--
+                <input type="button" id="submit" value="submit">
+                <div id="tuka"></div>
+                -->
                 Prep: 10mins Cook: 1hr and 30mins
                 <br> Make these tall Japanese pancakes and watch them bounce and jiggle.
                 <br> Something a little different for your next brunch or weekend breakfast treat.
@@ -251,3 +290,4 @@
 </body>
 
 </html>
+}

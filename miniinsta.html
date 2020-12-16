@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Mini Instagram</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="insta.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 
@@ -69,28 +70,6 @@
 <body>
     <h2>Instagram</h2>
 
-    <script>
-        window.alert("Click ok if you are 18+");
-    </script>
-
-    <script>
-        var likes = 0;
-
-        function btnClick() {
-            likes++;
-            document.getElementById('likes').innerHTML = likes;
-            return true
-        }
-    </script>
-
-    <script type="text/javascript">
-        function funk(m, text) {
-            var x = document.getElementById(text).value;
-
-            var komentar = "<p style='color: #fff; font-size: medium; font-style:italic; padding-left: 5%;'>" + x + "</p>";
-            document.getElementById(m).innerHTML = komentar;
-        }
-    </script>
 
     <!--prva slika-->
     <div>
@@ -101,8 +80,11 @@
         </p>
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
+
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
 
     </div>
 
@@ -116,7 +98,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
     <!--treta slika-->
@@ -130,7 +114,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -144,7 +130,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -157,7 +145,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -170,7 +160,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -183,7 +175,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -196,7 +190,9 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
+
     </div>
 
 
@@ -209,7 +205,8 @@
         <p id="kom"></p>
         <p style="font-size:medium; font-style: italic;  font-weight: bold; padding-left: 5%;">Comment:</p>
         <textarea placeholder="Comment:" id="textarea" rows="2" ; cols="36" ;></textarea>
-        <button class="kopce" type="button" onclick="funk('kom','textarea')">post</button>
+        <input class="kopce" id="post" type="button" value="Post">
+        <p class="kopce" style="margin-bottom: 20px;" id="komentari"></p>
     </div>
 
 
